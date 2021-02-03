@@ -27,10 +27,11 @@ class CandidateCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                backgroundImage: candidate.face,
-              ),
-              Text(candidate.candidateName),
+              // CircleAvatar(
+              //   backgroundImage: candidate.face,
+              // ),
+              Icon(Icons.ac_unit),
+              Text("hi"),
               
             ],
           )
