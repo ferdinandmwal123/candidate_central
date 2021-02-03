@@ -9,6 +9,18 @@ class AppWidget extends StatelessWidget {
       title: 'Candidates',
       debugShowCheckedModeBanner: false,
       builder: ExtendedNavigator.builder(router:app_router.Router(),),
+       theme: ThemeData.light().copyWith(
+          // primaryColor: Colors.green[800],
+          accentColor: Colors.blueAccent,
+          floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: Colors.blue[900],
+          ),
+          inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          )
+       )
     );
   }
 }
