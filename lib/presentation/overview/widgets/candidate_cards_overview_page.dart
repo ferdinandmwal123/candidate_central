@@ -5,7 +5,15 @@ class CandidateCardsOverviewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: CandidateCard(),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            CandidateCard(),
+            CandidateCard()
+          ],
+        ),
+    )
     );
   }
 }
