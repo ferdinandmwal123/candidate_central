@@ -46,7 +46,7 @@ class CandidateOverviewPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 120),
+                  margin: EdgeInsets.only(top: 120, left: 3),
                   constraints: BoxConstraints.expand(height:200),
                   child: CandidateCardsOverviewPage(),
                 )
