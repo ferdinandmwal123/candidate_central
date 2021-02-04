@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'candidate_watcher_event.dart';
