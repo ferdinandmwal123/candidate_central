@@ -8,13 +8,18 @@ part 'candidate_watcher_event.dart';
 part 'candidate_watcher_state.dart';
 part 'candidate_watcher_bloc.freezed.dart';
 
-class CandidateWatcherBloc extends Bloc<CandidateWatcherEvent, CandidateWatcherState> {
+class CandidateWatcherBloc
+    extends Bloc<CandidateWatcherEvent, CandidateWatcherState> {
   CandidateWatcherBloc() : super(_Initial());
 
   @override
   Stream<CandidateWatcherState> mapEventToState(
     CandidateWatcherEvent event,
   ) async* {
-    // TODO: implement mapEventToState
+    yield* event.map(
+      started: (e) async*{
+        //TODO:(03)Map candidate started to sth
+      }
+    );
   }
 }
