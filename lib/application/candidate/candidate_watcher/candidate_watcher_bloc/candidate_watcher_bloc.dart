@@ -8,8 +8,7 @@ part 'candidate_watcher_event.dart';
 part 'candidate_watcher_state.dart';
 part 'candidate_watcher_bloc.freezed.dart';
 
-class CandidateWatcherBloc
-    extends Bloc<CandidateWatcherEvent, CandidateWatcherState> {
+class CandidateWatcherBloc extends Bloc<CandidateWatcherEvent, CandidateWatcherState> {
   CandidateWatcherBloc() : super(_Initial());
 
   @override
