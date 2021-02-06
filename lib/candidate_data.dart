@@ -1,19 +1,35 @@
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
+import 'package:flutter/painting.dart';
+import 'package:injectable/injectable.dart';
 
+@lazySingleton  
 class CandidateData {
-  List<Candidate> candidates = new List(2);
+  List<Candidate> candidates = [];
 
-  Candidate joeBiden =
-      Candidate(face: null, candidateName: null, age: null, party: null);
-  Candidate donaldTrump =
-      Candidate(face: null, candidateName: null, age: null, party: null);
-  Candidate hilaryClinton =
-      Candidate(face: null, candidateName: null, age: null, party: null);
+  Candidate donaldT =
+     Candidate(
+        face: AssetImage("lib/assets/trump.jpg"),
+        candidateName: "Donald Trump Sr",
+        age: 75,
+        party: "Rep.");
 
-  List<Candidate> addCandidates() {
-    candidates.add(joeBiden);
-    candidates.add(donaldTrump);
-    candidates.add(hilaryClinton);
+  Candidate hilaryC =
+      Candidate(
+        age: 24,
+        candidateName: "Hilary Clinton",
+        face: AssetImage("lib/assets/clinton.jpg"),
+        party: "Dem.");
+  Candidate joeB =
+      Candidate(
+        age: 98,
+        candidateName: "Joe Biden",
+        face: AssetImage("lib/assets/biden.jpg"),
+        party: "Dem.");
+
+   List<Candidate> addCandidates() {
+    candidates.add(joeB);
+    candidates.add(donaldT);
+    candidates.add(hilaryC);
 
     return candidates;
   }

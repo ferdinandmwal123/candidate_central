@@ -1,5 +1,4 @@
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
-import 'package:candidate_central/presentation/overview/widgets/candidate_cards_overview_page.dart';
 import 'package:candidate_central/styles.dart';
 import 'package:flutter/material.dart';
 

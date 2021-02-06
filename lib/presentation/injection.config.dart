@@ -7,6 +7,8 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
+import '../candidate_data.dart';
+
 /// adds generated dependencies
 /// to the provided [GetIt] instance
 
@@ -16,5 +18,6 @@ GetIt $initGetIt(
   EnvironmentFilter environmentFilter,
 }) {
   final gh = GetItHelper(get, environment, environmentFilter);
+  gh.lazySingleton<CandidateData>(() => CandidateData());
   return get;
 }

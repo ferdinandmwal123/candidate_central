@@ -13,4 +13,3 @@ abstract class Candidate with _$Candidate {
   }) = _Candidate;
 }
 
-//!Fake Candidate Data
