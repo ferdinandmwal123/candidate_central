@@ -40,7 +40,7 @@ class CandidateOverviewPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Find Your New candidate',
+                      'Find Your Candidate',
                       style: titleStyleWhite,
                     )
                   ],
@@ -129,10 +129,25 @@ class CandidateOverviewPage extends StatelessWidget {
               CircleAvatar(
                 backgroundImage: candidate.face,
               ),
-              Text(
-                candidate.candidateName,
-                style: jobCardTitileStyleBlue,
-              )
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text(
+                      candidate.candidateName,
+                      style: jobCardTitileStyleBlue,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    "Age :" + candidate.age.toString(),
+                    style: salaryStyle,
+                  ),
+                ],
+              ),
             ],
           ),
           Text(candidate.age.toString(), style: jobCardTitileStyleBlack),
