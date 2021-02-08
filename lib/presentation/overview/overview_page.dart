@@ -1,4 +1,8 @@
+import 'package:candidate_central/candidate_data.dart';
+import 'package:candidate_central/domain/core/candidate/candidate.dart';
+import 'package:candidate_central/presentation/overview/widgets/candidate_card.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_cards_overview_page.dart';
+import 'package:candidate_central/presentation/overview/widgets/overview_top_design.dart';
 import 'package:candidate_central/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -17,44 +21,25 @@ class CandidateOverviewPage extends StatelessWidget {
         //TODO:(02)Uncompleted switch for candidates who are still in
         //*actions: [],
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Container(
-                  padding: EdgeInsets.all(40),
-                  constraints: BoxConstraints.expand(height: 225),
-                  decoration: BoxDecoration(
-                      gradient: new LinearGradient(
-                          colors: [lightBlueIsh, lightGreen],
-                          begin: const FractionalOffset(1.0, 1.0),
-                          end: const FractionalOffset(0.2, 0.2),
-                          stops: [0.0, 1.0],
-                          tileMode: TileMode.clamp),
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(30),
-                          bottomRight: Radius.circular(30))),
-                  child: Container(
-                    padding: EdgeInsets.only(top: 50),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Find Your New Job', style: titleStyleWhite,)
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 120, left: 3),
-                  constraints: BoxConstraints.expand(height:200),
-                  child: CandidateCardsOverviewPage(),
-                )
-              ],
-            )
-          ],
-        ),
-      ),
+      body: SingleChildScrollView(
+          child: Stack(
+        children: [
+          OverviewDesign(),
+          CandidateCardsOverview(),
+          Container(
+            height: 500,
+            margin: const EdgeInsets.only(top: 300),
+            padding: const EdgeInsets.all(20),
+            child: Container(
+              margin: const EdgeInsets.only(top: 40),
+              child: Text(
+                "Explore New Opportunities",
+                style: titileStyleBlack,
+              ),
+            ),
+          )
+        ],
+      )),
     );
   }
 }

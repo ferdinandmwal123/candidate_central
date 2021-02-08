@@ -17,11 +17,13 @@ class _$CandidateTearOff {
   _Candidate call(
       {@required AssetImage face,
       @required String candidateName,
-      @required int age}) {
+      @required int age,
+      @required String party}) {
     return _Candidate(
       face: face,
       candidateName: candidateName,
       age: age,
+      party: party,
     );
   }
 }
@@ -35,6 +37,7 @@ mixin _$Candidate {
   AssetImage get face;
   String get candidateName;
   int get age;
+  String get party;
 
   @JsonKey(ignore: true)
   $CandidateCopyWith<Candidate> get copyWith;
@@ -44,7 +47,7 @@ mixin _$Candidate {
 abstract class $CandidateCopyWith<$Res> {
   factory $CandidateCopyWith(Candidate value, $Res Function(Candidate) then) =
       _$CandidateCopyWithImpl<$Res>;
-  $Res call({AssetImage face, String candidateName, int age});
+  $Res call({AssetImage face, String candidateName, int age, String party});
 }
 
 /// @nodoc
@@ -60,6 +63,7 @@ class _$CandidateCopyWithImpl<$Res> implements $CandidateCopyWith<$Res> {
     Object face = freezed,
     Object candidateName = freezed,
     Object age = freezed,
+    Object party = freezed,
   }) {
     return _then(_value.copyWith(
       face: face == freezed ? _value.face : face as AssetImage,
@@ -67,6 +71,7 @@ class _$CandidateCopyWithImpl<$Res> implements $CandidateCopyWith<$Res> {
           ? _value.candidateName
           : candidateName as String,
       age: age == freezed ? _value.age : age as int,
+      party: party == freezed ? _value.party : party as String,
     ));
   }
 }
@@ -77,7 +82,7 @@ abstract class _$CandidateCopyWith<$Res> implements $CandidateCopyWith<$Res> {
           _Candidate value, $Res Function(_Candidate) then) =
       __$CandidateCopyWithImpl<$Res>;
   @override
-  $Res call({AssetImage face, String candidateName, int age});
+  $Res call({AssetImage face, String candidateName, int age, String party});
 }
 
 /// @nodoc
@@ -94,6 +99,7 @@ class __$CandidateCopyWithImpl<$Res> extends _$CandidateCopyWithImpl<$Res>
     Object face = freezed,
     Object candidateName = freezed,
     Object age = freezed,
+    Object party = freezed,
   }) {
     return _then(_Candidate(
       face: face == freezed ? _value.face : face as AssetImage,
@@ -101,6 +107,7 @@ class __$CandidateCopyWithImpl<$Res> extends _$CandidateCopyWithImpl<$Res>
           ? _value.candidateName
           : candidateName as String,
       age: age == freezed ? _value.age : age as int,
+      party: party == freezed ? _value.party : party as String,
     ));
   }
 }
@@ -108,10 +115,14 @@ class __$CandidateCopyWithImpl<$Res> extends _$CandidateCopyWithImpl<$Res>
 /// @nodoc
 class _$_Candidate implements _Candidate {
   const _$_Candidate(
-      {@required this.face, @required this.candidateName, @required this.age})
+      {@required this.face,
+      @required this.candidateName,
+      @required this.age,
+      @required this.party})
       : assert(face != null),
         assert(candidateName != null),
-        assert(age != null);
+        assert(age != null),
+        assert(party != null);
 
   @override
   final AssetImage face;
@@ -119,10 +130,12 @@ class _$_Candidate implements _Candidate {
   final String candidateName;
   @override
   final int age;
+  @override
+  final String party;
 
   @override
   String toString() {
-    return 'Candidate(face: $face, candidateName: $candidateName, age: $age)';
+    return 'Candidate(face: $face, candidateName: $candidateName, age: $age, party: $party)';
   }
 
   @override
@@ -135,7 +148,9 @@ class _$_Candidate implements _Candidate {
                 const DeepCollectionEquality()
                     .equals(other.candidateName, candidateName)) &&
             (identical(other.age, age) ||
-                const DeepCollectionEquality().equals(other.age, age)));
+                const DeepCollectionEquality().equals(other.age, age)) &&
+            (identical(other.party, party) ||
+                const DeepCollectionEquality().equals(other.party, party)));
   }
 
   @override
@@ -143,7 +158,8 @@ class _$_Candidate implements _Candidate {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(face) ^
       const DeepCollectionEquality().hash(candidateName) ^
-      const DeepCollectionEquality().hash(age);
+      const DeepCollectionEquality().hash(age) ^
+      const DeepCollectionEquality().hash(party);
 
   @JsonKey(ignore: true)
   @override
@@ -155,7 +171,8 @@ abstract class _Candidate implements Candidate {
   const factory _Candidate(
       {@required AssetImage face,
       @required String candidateName,
-      @required int age}) = _$_Candidate;
+      @required int age,
+      @required String party}) = _$_Candidate;
 
   @override
   AssetImage get face;
@@ -163,6 +180,8 @@ abstract class _Candidate implements Candidate {
   String get candidateName;
   @override
   int get age;
+  @override
+  String get party;
   @override
   @JsonKey(ignore: true)
   _$CandidateCopyWith<_Candidate> get copyWith;
