@@ -150,8 +150,21 @@ class CandidateOverviewPage extends StatelessWidget {
               ),
             ],
           ),
-          Text(candidate.age.toString(), style: jobCardTitileStyleBlack),
-          Text(candidate.party),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [Text("Hi awdawd"), Text("43"), Text("Naiu")],
+              ),
+              Column(
+                children: [
+                  Text("123 dawda"),
+                  Text("Hi"),
+                  Text("43"),
+                ],
+              ),
+            ],
+          )
         ],
       ),
     );
