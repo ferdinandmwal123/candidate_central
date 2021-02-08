@@ -2,7 +2,7 @@ import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_card.dart';
 import 'package:flutter/material.dart';
 
-class CandidateCardsOverviewPage extends StatelessWidget {
+class CandidateCardsOverview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +10,7 @@ class CandidateCardsOverviewPage extends StatelessWidget {
         constraints: const BoxConstraints.expand(height: 200),
         child: ListView(
           scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.only(left: 40),
+          padding: const EdgeInsets.only(left: 40),
           children: getRecentcandidates(),
         ));
   }
@@ -48,6 +48,6 @@ class CandidateCardsOverviewPage extends StatelessWidget {
   }
 
   Widget getcandidateCard(Candidate candidate) {
-    return  CandidateCard(candidate: candidate);
+    return CandidateCard(candidate: candidate);
   }
 }

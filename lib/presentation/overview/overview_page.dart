@@ -25,7 +25,7 @@ class CandidateOverviewPage extends StatelessWidget {
           child: Stack(
         children: [
           OverviewDesign(),
-          CandidateCardsOverviewPage(),
+          CandidateCardsOverview(),
           Container(
             height: 500,
             margin: const EdgeInsets.only(top: 300),
