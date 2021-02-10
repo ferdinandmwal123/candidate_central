@@ -11,5 +11,6 @@ abstract class Candidate with _$Candidate {
     @required int age,
     @required String party,
   }) = _Candidate;
+  
 }
 

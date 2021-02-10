@@ -1,24 +1,34 @@
-import 'package:candidate_central/candidate_data.dart';
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_card.dart';
 import 'package:flutter/material.dart';
 
 class CandidateCardsOverview extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(top: 120),
-        constraints: const BoxConstraints.expand(height: 200),
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.only(left: 40),
-          children: getRecentcandidates(),
-        ));
+      margin: const EdgeInsets.only(top: 120),
+      constraints: const BoxConstraints.expand(height: 200),
+      // child: ListView(
+      //   scrollDirection: Axis.horizontal,
+      //   padding: const EdgeInsets.only(left: 40),
+      //   children: getRecentcandidates(),
+      // ));
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.only(left: 40),
+          itemCount: getRecentcandidates().length,
+          itemBuilder: (context, index) {
+            return getRecentcandidates().elementAt(index);
+          }),
+    );
   }
 
   List<Candidate> findcandidates() {
     List<Candidate> candidates = [];
+
+    // candidates.add(CandidateData().joeB);
+    // candidates.add(CandidateData().donaldT);
+    // candidates.add(CandidateData().hilaryC);
 
     candidates.add(const Candidate(
         face: AssetImage("lib/assets/trump.jpg"),
