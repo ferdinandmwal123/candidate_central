@@ -8,11 +8,7 @@ class CandidateCardsOverview extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 120),
       constraints: const BoxConstraints.expand(height: 200),
-      // child: ListView(
-      //   scrollDirection: Axis.horizontal,
-      //   padding: const EdgeInsets.only(left: 40),
-      //   children: getRecentcandidates(),
-      // ));
+    
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.only(left: 40),
