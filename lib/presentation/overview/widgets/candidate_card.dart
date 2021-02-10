@@ -43,34 +43,34 @@ class CandidateDetails extends StatelessWidget {
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Icon(Icons.baby_changing_station, size: 20,),
-            const Icon(Icons.people, size: 20,),
-            const Icon(Icons.block, size: 20,),
+          children: const [
+             Icon(Icons.baby_changing_station, size: 20,),
+             Icon(Icons.people, size: 20,),
+             Icon(Icons.block, size: 20,),
           ],
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text("Pro-choice"),
-            const Text("Pro-life"),
-            const Text("Low tax")
+          children: const [
+            Text("Pro-choice"),
+             Text("Pro-life"),
+             Text("Low tax")
           ],
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Icon(Icons.baby_changing_station, size: 20,),
-            const Icon(Icons.people, size: 20,),
-            const Icon(Icons.block, size: 20,),
+          children: const [
+             Icon(Icons.baby_changing_station, size: 20,),
+             Icon(Icons.people, size: 20,),
+             Icon(Icons.block, size: 20,),
           ],
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text("Less this"),
-            const Text("More x"),
-            const Text("Less x"),
+          children: const [
+             Text("Less this"),
+             Text("More x"),
+             Text("Less x"),
           ],
         ),
       ],
