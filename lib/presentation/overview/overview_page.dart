@@ -33,7 +33,7 @@ class CandidateOverviewPage extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.only(top: 40),
               child: Text(
-                "Explore New Opportunities",
+                "Election zones near you",
                 style: titileStyleBlack,
               ),
             ),

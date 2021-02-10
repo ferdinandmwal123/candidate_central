@@ -1,9 +1,7 @@
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_face_name_date.dart';
 import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
 
-@injectable
 class CandidateCard extends StatelessWidget {
   final Candidate candidate;
 
