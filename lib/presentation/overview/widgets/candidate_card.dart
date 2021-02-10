@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_face_name_date.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +26,7 @@ class CandidateCard extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(15))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,//!Change to space card
         children: <Widget>[
           CandidateFaceNameAge(candidate: candidate),
           CandidateDetails(),
@@ -41,17 +43,35 @@ class CandidateDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Hi awdawd"),
-            const Text("43"),
-            const Text("Naiu")
+            const Icon(Icons.baby_changing_station, size: 20,),
+            const Icon(Icons.people, size: 20,),
+            const Icon(Icons.block, size: 20,),
           ],
         ),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("123 dawda"),
-            const Text("Hi"),
-            const Text("43"),
+            const Text("Pro-choice"),
+            const Text("Pro-life"),
+            const Text("Low tax")
+          ],
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Icon(Icons.baby_changing_station, size: 20,),
+            const Icon(Icons.people, size: 20,),
+            const Icon(Icons.block, size: 20,),
+          ],
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text("Less this"),
+            const Text("More x"),
+            const Text("Less x"),
           ],
         ),
       ],
