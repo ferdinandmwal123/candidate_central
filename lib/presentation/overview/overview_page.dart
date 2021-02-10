@@ -1,6 +1,4 @@
-import 'package:candidate_central/candidate_data.dart';
-import 'package:candidate_central/domain/core/candidate/candidate.dart';
-import 'package:candidate_central/presentation/overview/widgets/candidate_card.dart';
+
 import 'package:candidate_central/presentation/overview/widgets/candidate_cards_overview_page.dart';
 import 'package:candidate_central/presentation/overview/widgets/overview_top_design.dart';
 import 'package:candidate_central/styles.dart';

@@ -20,7 +20,7 @@ class CandidateCardsOverview extends StatelessWidget {
   }
 
   List<Candidate> findcandidates() {
-    List<Candidate> candidates = [];
+    final List<Candidate> candidates = [];
 
     // candidates.add(CandidateData().joeB);
     // candidates.add(CandidateData().donaldT);
