@@ -1,9 +1,7 @@
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_face_name_date.dart';
 import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
 
-@injectable
 class CandidateCard extends StatelessWidget {
   final Candidate candidate;
 
@@ -43,13 +41,17 @@ class CandidateDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
-          children: [Text("Hi awdawd"), Text("43"), Text("Naiu")],
+          children: [
+            const Text("Hi awdawd"),
+            const Text("43"),
+            const Text("Naiu")
+          ],
         ),
         Column(
           children: [
             const Text("123 dawda"),
             const Text("Hi"),
-            Text("43"),
+            const Text("43"),
           ],
         ),
       ],
