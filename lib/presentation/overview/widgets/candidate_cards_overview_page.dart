@@ -1,8 +1,10 @@
+import 'package:candidate_central/candidate_data.dart';
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_card.dart';
 import 'package:flutter/material.dart';
 
 class CandidateCardsOverview extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,18 +20,18 @@ class CandidateCardsOverview extends StatelessWidget {
   List<Candidate> findcandidates() {
     List<Candidate> candidates = [];
 
-    candidates.add(new Candidate(
+    candidates.add(const Candidate(
         face: AssetImage("lib/assets/trump.jpg"),
         candidateName: "Donald Trump Sr",
         age: 75,
         party: "Rep."));
-    candidates.add(new Candidate(
+    candidates.add(const Candidate(
         age: 24,
         candidateName: "Hilary Clinton",
         face: AssetImage("lib/assets/clinton.jpg"),
         party: "Dem."));
 
-    candidates.add(new Candidate(
+    candidates.add(const Candidate(
         age: 98,
         candidateName: "Joe Biden",
         face: AssetImage("lib/assets/biden.jpg"),
@@ -39,9 +41,9 @@ class CandidateCardsOverview extends StatelessWidget {
   }
 
   List<Widget> getRecentcandidates() {
-    List<Widget> recentcandidateCards = [];
-    List<Candidate> candidates = findcandidates();
-    for (Candidate candidate in candidates) {
+    final List<Widget> recentcandidateCards = [];
+    final List<Candidate> candidates = findcandidates();
+    for (final Candidate candidate in candidates) {
       recentcandidateCards.add(getcandidateCard(candidate));
     }
     return recentcandidateCards;

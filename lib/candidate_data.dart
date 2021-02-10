@@ -1,8 +1,6 @@
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:flutter/painting.dart';
-import 'package:injectable/injectable.dart';
 
-@lazySingleton  
 class CandidateData {
   List<Candidate> candidates = [];
 

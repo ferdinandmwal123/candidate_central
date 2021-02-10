@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 
 import '../domain/core/candidate/candidate.dart';
 import 'overview/widgets/candidate_card.dart';
-import '../candidate_data.dart';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance
@@ -23,6 +22,5 @@ GetIt $initGetIt(
   final gh = GetItHelper(get, environment, environmentFilter);
   gh.factory<CandidateCard>(
       () => CandidateCard(key: get<Key>(), candidate: get<Candidate>()));
-  gh.lazySingleton<CandidateData>(() => CandidateData());
   return get;
 }
