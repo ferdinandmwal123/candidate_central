@@ -1,7 +1,10 @@
 import 'dart:ui';
+import 'package:auto_route/auto_route.dart';
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/overview/widgets/candidate_face_name_date.dart';
 import 'package:flutter/material.dart';
+import 'package:candidate_central/presentation/routes/router.gr.dart'
+    as app_router;
 
 class CandidateCard extends StatelessWidget {
   final Candidate candidate;
@@ -10,6 +13,10 @@ class CandidateCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: () {
+        ExtendedNavigator.of(context).push(app_router.Routes.candidatePage,
+            arguments: app_router.CandidatePageArguments(candidate: candidate));
+      },
       child: Container(
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.only(right: 20, bottom: 30, top: 30),
