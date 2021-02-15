@@ -1,4 +1,5 @@
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
+import 'package:candidate_central/presentation/overview/widgets/overview_top_design.dart';
 import 'package:flutter/material.dart';
 
 class CandidatePage extends StatelessWidget {
@@ -7,9 +8,15 @@ class CandidatePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
-        child: Text(candidate.candidateName),
+        child: Stack(
+          children: [
+            const OverviewDesign(
+              text: "welcome dawg",
+            ),
+          ],
+        ),
       ),
     );
   }

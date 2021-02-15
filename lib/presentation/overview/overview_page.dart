@@ -1,4 +1,3 @@
-
 import 'package:candidate_central/presentation/overview/widgets/candidate_cards_overview_page.dart';
 import 'package:candidate_central/presentation/overview/widgets/overview_top_design.dart';
 import 'package:candidate_central/styles.dart';
@@ -22,7 +21,9 @@ class CandidateOverviewPage extends StatelessWidget {
       body: SingleChildScrollView(
           child: Stack(
         children: [
-          OverviewDesign(),
+          const OverviewDesign(
+            text: "Find Your Candidate",
+          ),
           CandidateCardsOverview(),
           Container(
             height: 500,

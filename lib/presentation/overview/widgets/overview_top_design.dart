@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../styles.dart';
 
 class OverviewDesign extends StatelessWidget {
+  final String text;
+
+  const OverviewDesign({Key key, this.text}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +26,7 @@ class OverviewDesign extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Find Your Candidate',
+              text,
               style: titleStyleWhite,
             )
           ],
