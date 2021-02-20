@@ -1,4 +1,6 @@
 import 'package:candidate_central/presentation/overview/widgets/candidate_cards_overview_page.dart';
+import 'package:candidate_central/presentation/overview/widgets/overview_top_design.dart';
+import 'package:candidate_central/styles.dart';
 import 'package:flutter/material.dart';
 
 class CandidateOverviewPage extends StatelessWidget {
@@ -16,7 +18,29 @@ class CandidateOverviewPage extends StatelessWidget {
         //TODO:(02)Uncompleted switch for candidates who are still in
         //*actions: [],
       ),
-      body: CandidateCardsOverviewPage(),
+      body: SafeArea(
+        child: SingleChildScrollView(
+            child: Stack(
+          children: [
+            const OverviewDesign(
+              text: "Find Your Candidate",
+            ),
+            CandidateCardsOverview(),
+            Container(
+              height: 500,
+              margin: const EdgeInsets.only(top: 300),
+              padding: const EdgeInsets.all(20),
+              child: Container(
+                margin: const EdgeInsets.only(top: 40),
+                child: Text(
+                  "Election zones near you",
+                  style: titileStyleBlack,
+                ),
+              ),
+            )
+          ],
+        )),
+      ),
     );
   }
 }
