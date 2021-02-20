@@ -9,6 +9,9 @@ class CandidatePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("${candidate.candidateName}'s page"),
@@ -22,7 +25,10 @@ class CandidatePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            CircleAvatar(backgroundImage: candidate.face),
+            Image(
+              image: candidate.face,
+              semanticLabel: "${candidate.candidateName} 's face",
+            ),
             Text(candidate.candidateName),
           ],
         ),
