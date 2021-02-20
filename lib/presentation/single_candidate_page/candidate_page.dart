@@ -25,6 +25,7 @@ class CandidatePage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Container(
+            height: height,
             margin: const EdgeInsets.only(top: 10),
             child: Column(
               children: [
