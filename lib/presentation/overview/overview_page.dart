@@ -6,20 +6,20 @@ import 'package:flutter/material.dart';
 class CandidateOverviewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Candidates'),
-          leading: IconButton(
-            icon: const Icon(Icons.exit_to_app),
-            onPressed: () {
-              //TODO:(O1) When exit app is pressed
-            },
-          ),
-          //TODO:(02)Uncompleted switch for candidates who are still in
-          //*actions: [],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Candidates'),
+        leading: IconButton(
+          icon: const Icon(Icons.exit_to_app),
+          onPressed: () {
+            //TODO:(O1) When exit app is pressed
+          },
         ),
-        body: SingleChildScrollView(
+        //TODO:(02)Uncompleted switch for candidates who are still in
+        //*actions: [],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
             child: Stack(
           children: [
             const OverviewDesign(

@@ -12,18 +12,18 @@ class CandidatePage extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("${candidate.candidateName}'s page"),
-          leading: IconButton(
-              icon: const Icon(Icons.arrow_back_ios),
-              onPressed: () {
-                ExtendedNavigator.of(context).popUntil((route) =>
-                    route.settings.name == Routes.candidateOverviewPage);
-              }),
-        ),
-        body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("${candidate.candidateName}'s page"),
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              ExtendedNavigator.of(context).popUntil((route) =>
+                  route.settings.name == Routes.candidateOverviewPage);
+            }),
+      ),
+      body: SafeArea(
+        child: Center(
           child: Container(
             margin: const EdgeInsets.only(top: 10),
             child: Column(
