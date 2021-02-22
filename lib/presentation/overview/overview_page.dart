@@ -18,27 +18,29 @@ class CandidateOverviewPage extends StatelessWidget {
         //TODO:(02)Uncompleted switch for candidates who are still in
         //*actions: [],
       ),
-      body: SingleChildScrollView(
-          child: Stack(
-        children: [
-          const OverviewDesign(
-            text: "Find Your Candidate",
-          ),
-          CandidateCardsOverview(),
-          Container(
-            height: 500,
-            margin: const EdgeInsets.only(top: 300),
-            padding: const EdgeInsets.all(20),
-            child: Container(
-              margin: const EdgeInsets.only(top: 40),
-              child: Text(
-                "Election zones near you",
-                style: titileStyleBlack,
-              ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+            child: Stack(
+          children: [
+            const OverviewDesign(
+              text: "Find Your Candidate",
             ),
-          )
-        ],
-      )),
+            CandidateCardsOverview(),
+            Container(
+              height: 500,
+              margin: const EdgeInsets.only(top: 300),
+              padding: const EdgeInsets.all(20),
+              child: Container(
+                margin: const EdgeInsets.only(top: 40),
+                child: Text(
+                  "Election zones near you",
+                  style: titileStyleBlack,
+                ),
+              ),
+            )
+          ],
+        )),
+      ),
     );
   }
 }

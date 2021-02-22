@@ -9,6 +9,9 @@ class CandidatePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("${candidate.candidateName}'s page"),
@@ -19,12 +22,21 @@ class CandidatePage extends StatelessWidget {
                   route.settings.name == Routes.candidateOverviewPage);
             }),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            CircleAvatar(backgroundImage: candidate.face),
-            Text(candidate.candidateName),
-          ],
+      body: SafeArea(
+        child: Center(
+          child: Container(
+            height: height,
+            margin: const EdgeInsets.only(top: 10),
+            child: Column(
+              children: [
+                Image(
+                  image: candidate.face,
+                  semanticLabel: "${candidate.candidateName} 's face",
+                  width: width - 200,
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
