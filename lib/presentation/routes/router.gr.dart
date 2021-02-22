@@ -10,8 +10,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../domain/core/candidate/candidate.dart';
-import '../single_candidate_page/candidate_page.dart';
 import '../overview/overview_page.dart';
+import '../single_candidate_page/candidate_page.dart';
 
 class Routes {
   static const String candidateOverviewPage = '/';
