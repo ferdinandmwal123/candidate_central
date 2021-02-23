@@ -1,3 +1,4 @@
+//TODO(O4): Make this a freezed data class and make it lazySingleton
 const candidateData = [
   {
     "name": "Donald Trump Sr.",
