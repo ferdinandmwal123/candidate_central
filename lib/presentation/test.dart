@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Widget> itemsData = [];
 
   void getPostsData() {
-    final List<dynamic> responseList = FOOD_DATA;
+    final List<dynamic> responseList = candidateData;
     final List<Widget> listItems = [];
 
     for (final post in responseList) {
@@ -55,17 +55,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     Text(
                       post["name"].toString(),
                       style: const TextStyle(
-                          fontSize: 28, fontWeight: FontWeight.bold),
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      post["brand"].toString(),
+                      post["party"].toString(),
                       style: const TextStyle(fontSize: 17, color: Colors.grey),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
                     Text(
-                      "\$ ${post["price"]}",
+                      " ${post["age"]}",
                       style: const TextStyle(
                           fontSize: 25,
                           color: Colors.black,
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 Image.asset(
-                  "lib/assets/${post["image"]}".toString(),
+                  "lib/assets/${post["face"]}".toString(),
                   height: double.infinity,
                 )
               ],
@@ -132,15 +132,15 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const<Widget>[
-                   Text(
+                children: const <Widget>[
+                  Text(
                     "Loyality Cards",
                     style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.bold,
                         fontSize: 20),
                   ),
-                   Text(
+                  Text(
                     "Menu",
                     style: TextStyle(
                         color: Colors.black,
@@ -220,12 +220,13 @@ class CategoriesScroller extends StatelessWidget {
                 height: categoryHeight,
                 decoration: BoxDecoration(
                     color: Colors.orange.shade400,
-                    borderRadius:const BorderRadius.all(Radius.circular(20.0))),
+                    borderRadius:
+                        const BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const<Widget>[
+                    children: const <Widget>[
                       Text(
                         "Most\nFavorites",
                         style: TextStyle(
@@ -250,8 +251,9 @@ class CategoriesScroller extends StatelessWidget {
                 height: categoryHeight,
                 decoration: BoxDecoration(
                     color: Colors.blue.shade400,
-                    borderRadius: const BorderRadius.all(Radius.circular(20.0))),
-                child:  Padding(
+                    borderRadius:
+                        const BorderRadius.all(Radius.circular(20.0))),
+                child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -280,7 +282,8 @@ class CategoriesScroller extends StatelessWidget {
                 height: categoryHeight,
                 decoration: BoxDecoration(
                     color: Colors.lightBlueAccent.shade400,
-                    borderRadius: const BorderRadius.all(Radius.circular(20.0))),
+                    borderRadius:
+                        const BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(

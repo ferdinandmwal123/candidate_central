@@ -1,18 +1,15 @@
-const FOOD_DATA = [
-  {"name": "Burger", "brand": "Hawkers", "price": 2.99, "image": "trump.jpg"},
+const candidateData = [
   {
-    "name": "Cheese Dip",
-    "brand": "Hawkers",
-    "price": 4.99,
-    "image": "clinton.jpg"
+    "name": "Donald Trump Sr.",
+    "age": 75,
+    "party": "Republican",
+    "face": "trump.jpg"
   },
-  {"name": "Cola", "brand": "Mcdonald", "price": 1.49, "image": "biden.jpg"},
-  {"name": "Burger", "brand": "Hawkers", "price": 2.99, "image": "trump.jpg"},
+  {"name": "Joe Biden", "age": 88, "party": "Democrat", "face": "biden.jpg"},
   {
-    "name": "Cheese Dip",
-    "brand": "Hawkers",
-    "price": 4.99,
-    "image": "clinton.jpg"
+    "name": "Hilary Clinton",
+    "age": 21,
+    "party": "Democrat",
+    "face": "clinton.jpg"
   },
-  {"name": "Cola", "brand": "Mcdonald", "price": 1.49, "image": "biden.jpg"},
 ];
