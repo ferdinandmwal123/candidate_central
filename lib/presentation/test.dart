@@ -32,13 +32,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void getPostsData() {
     final List<dynamic> responseList = FOOD_DATA;
-    List<Widget> listItems = [];
-    responseList.forEach((post) {
+    final List<Widget> listItems = [];
+
+    for (final post in responseList) {
       listItems.add(Container(
           height: 150,
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              borderRadius: const BorderRadius.all(Radius.circular(20.0)),
               color: Colors.white,
               boxShadow: [
                 BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
@@ -79,7 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           )));
-    });
+    }
+
     setState(() {
       itemsData = listItems;
     });
