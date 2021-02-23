@@ -132,15 +132,15 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Text(
+                children: const<Widget>[
+                   Text(
                     "Loyality Cards",
                     style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.bold,
                         fontSize: 20),
                   ),
-                  Text(
+                   Text(
                     "Menu",
                     style: TextStyle(
                         color: Colors.black,
@@ -166,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: ListView.builder(
                       controller: controller,
                       itemCount: itemsData.length,
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       itemBuilder: (context, index) {
                         double scale = 1.0;
                         if (topContainer > 0.5) {
