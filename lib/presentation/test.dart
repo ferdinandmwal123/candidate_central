@@ -205,7 +205,7 @@ class CategoriesScroller extends StatelessWidget {
     final double categoryHeight =
         MediaQuery.of(context).size.height * 0.30 - 50;
     return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
@@ -216,11 +216,11 @@ class CategoriesScroller extends StatelessWidget {
             children: <Widget>[
               Container(
                 width: 150,
-                margin: EdgeInsets.only(right: 20),
+                margin: const EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
                     color: Colors.orange.shade400,
-                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    borderRadius:const BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
