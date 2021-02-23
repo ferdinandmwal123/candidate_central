@@ -117,11 +117,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.search, color: Colors.black),
+              icon: const Icon(Icons.search, color: Colors.black),
               onPressed: () {},
             ),
             IconButton(
-              icon: Icon(Icons.person, color: Colors.black),
+              icon: const Icon(Icons.person, color: Colors.black),
               onPressed: () {},
             )
           ],
@@ -255,7 +255,7 @@ class CategoriesScroller extends StatelessWidget {
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: const <Widget>[
                       Text(
                         "Newest",
                         style: TextStyle(
@@ -276,16 +276,16 @@ class CategoriesScroller extends StatelessWidget {
               ),
               Container(
                 width: 150,
-                margin: EdgeInsets.only(right: 20),
+                margin: const EdgeInsets.only(right: 20),
                 height: categoryHeight,
                 decoration: BoxDecoration(
                     color: Colors.lightBlueAccent.shade400,
-                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    borderRadius: const BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: const <Widget>[
                       Text(
                         "Super\nSaving",
                         style: TextStyle(
