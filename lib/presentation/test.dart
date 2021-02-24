@@ -36,10 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
     final List<dynamic> responseList = candidateData;
     final List<Widget> listItems = [];
 
-
-    log("Hello");
-    log(responseList[1].toString());
-    log(responseList[0]["name"].toString());
     for (final post in responseList) {
       listItems.add(Container(
           height: 150,
