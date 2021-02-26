@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../candidate_data.dart';
@@ -23,7 +25,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final CategoriesScroller categoriesScroller = CategoriesScroller();
+  final CategoriesScroller categoriesScroller = const CategoriesScroller();
   ScrollController controller = ScrollController();
   bool closeTopContainer = false;
   double topContainer = 0;
@@ -49,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+                //!COntainer with text only!!!
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
