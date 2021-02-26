@@ -15,9 +15,9 @@ import '../single_candidate_page/candidate_page.dart';
 import '../test.dart';
 
 class Routes {
-  static const String candidateOverviewPage = '/candidate-overview-page';
+  static const String candidateOverviewPage = '/';
   static const String candidatePage = '/candidate-page';
-  static const String myHomePage = '/';
+  static const String myHomePage = '/my-home-page';
   static const all = <String>{
     candidateOverviewPage,
     candidatePage,
