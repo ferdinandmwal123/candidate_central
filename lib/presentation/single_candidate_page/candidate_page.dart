@@ -34,6 +34,9 @@ class CandidatePage extends StatelessWidget {
                   semanticLabel: "${candidate.candidateName} 's face",
                   width: width - 200,
                 ),
+                Row(
+                  children: [Text("data")],
+                )
               ],
             ),
           ),

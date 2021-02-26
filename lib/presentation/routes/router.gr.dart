@@ -12,13 +12,16 @@ import 'package:flutter/material.dart';
 import '../../domain/core/candidate/candidate.dart';
 import '../overview/overview_page.dart';
 import '../single_candidate_page/candidate_page.dart';
+import '../test.dart';
 
 class Routes {
   static const String candidateOverviewPage = '/';
   static const String candidatePage = '/candidate-page';
+  static const String myHomePage = '/my-home-page';
   static const all = <String>{
     candidateOverviewPage,
     candidatePage,
+    myHomePage,
   };
 }
 
@@ -28,6 +31,7 @@ class Router extends RouterBase {
   final _routes = <RouteDef>[
     RouteDef(Routes.candidateOverviewPage, page: CandidateOverviewPage),
     RouteDef(Routes.candidatePage, page: CandidatePage),
+    RouteDef(Routes.myHomePage, page: MyHomePage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -47,6 +51,12 @@ class Router extends RouterBase {
           key: args.key,
           candidate: args.candidate,
         ),
+        settings: data,
+      );
+    },
+    MyHomePage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => MyHomePage(),
         settings: data,
       );
     },
