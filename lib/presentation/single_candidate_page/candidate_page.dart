@@ -42,13 +42,18 @@ class CandidatePage extends StatelessWidget {
                     child: Row(
                       children: [
                         Column(
-                          children: [
-                            const Icon(Icons.accessible_forward_rounded),
-                            const Icon(Icons.access_alarm_sharp)
+                          children: const [
+                            Icon(Icons.accessible_forward_rounded),
+                            Icon(Icons.access_alarm_sharp),
+                            Icon(Icons.hail),
                           ],
                         ),
                         Column(
-                          children: const [Text("adwawdawd"), Text("BLaaa")],
+                          children:  const[
+                            Text("adwawdawd",style: TextStyle(fontSize: 20),),
+                             Text("BLaaaaaaa",style: TextStyle(fontSize: 20)),
+                             Text("Homogenous",style: TextStyle(fontSize: 20))
+                             ],
                         )
                       ],
                     ),
