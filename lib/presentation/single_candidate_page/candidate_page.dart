@@ -35,16 +35,25 @@ class CandidatePage extends StatelessWidget {
                   width: width - 200,
                 ),
                 const SizedBox(height: 12),
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 2.0),
-                      width: width,
-                      child: Text(
-                          " -Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."),
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 2.0),
+                    width: width,
+                    child: Row(
+                      children: [
+                        Column(
+                          children: [
+                            const Icon(Icons.accessible_forward_rounded),
+                            const Icon(Icons.access_alarm_sharp)
+                          ],
+                        ),
+                        Column(
+                          children: const [Text("adwawdawd"), Text("BLaaa")],
+                        )
+                      ],
                     ),
-                  ],
-                )
+                  ),
+                ),
               ],
             ),
           ),
