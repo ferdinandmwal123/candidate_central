@@ -34,7 +34,31 @@ class CandidatePage extends StatelessWidget {
                   semanticLabel: "${candidate.candidateName} 's face",
                   width: width - 200,
                 ),
-                Expanded(child: ListView.builder(itemBuilder: null))
+                const SizedBox(height: 12),
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 2.0),
+                    width: width,
+                    child: Row(
+                      children: [
+                        Column(
+                          children: const [
+                            Icon(Icons.accessible_forward_rounded),
+                            Icon(Icons.access_alarm_sharp),
+                            Icon(Icons.hail),
+                          ],
+                        ),
+                        Column(
+                          children:  const[
+                            Text("adwawdawd",style: TextStyle(fontSize: 20),),
+                             Text("BLaaaaaaa",style: TextStyle(fontSize: 20)),
+                             Text("Homogenous",style: TextStyle(fontSize: 20))
+                             ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

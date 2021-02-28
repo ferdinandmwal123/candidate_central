@@ -5,9 +5,9 @@ import 'package:candidate_central/presentation/test.dart';
 
 @MaterialAutoRouter(
   routes: <AutoRoute>[
-    MaterialRoute(page:CandidateOverviewPage),
+    MaterialRoute(page:CandidateOverviewPage,initial: true),
     MaterialRoute(page: CandidatePage),
-    MaterialRoute(page: MyHomePage, initial: true)
+    MaterialRoute(page: MyHomePage)
   ],
 )
 class $Router {}
