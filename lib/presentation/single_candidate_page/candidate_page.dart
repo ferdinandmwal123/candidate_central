@@ -52,26 +52,25 @@ class CandidatePage extends StatelessWidget {
                         ),
                         Flexible(
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
-                                "Trump has promised to reduce taxes from x to y",
-                                style: TextStyle(fontSize: 20),
-                              ),
-                              Text(
-                                "Trump has promised to reduce taxes from x to y",
-                                style: TextStyle(fontSize: 20),
-                              ),
-                              Text(
-                                "Trump has promised to reduce taxes from x to y",
-                                style: TextStyle(fontSize: 20),
-                              ),
-                              Text(
-                                "Trump has promised to do x about immigration",
-                                style: TextStyle(fontSize: 20),
-                              ),
-                            ]  
-                          ),
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const [
+                                 Text(
+                                  "Trump has promised to reduce taxes from x to y",
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Text(
+                                  "Trump has promised to reduce taxes from x to y",
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Text(
+                                  "Trump has promised to reduce taxes from x to y",
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                                Text(
+                                  "Trump has promised to do x about immigration",
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ]),
                         )
                       ],
                     ),
