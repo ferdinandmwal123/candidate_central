@@ -42,18 +42,22 @@ class CandidatePage extends StatelessWidget {
                     child: Row(
                       children: [
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [
-                            Icon(Icons.accessible_forward_rounded),
+                            Icon(Icons.money),
                             Icon(Icons.access_alarm_sharp),
                             Icon(Icons.hail),
                           ],
                         ),
-                        Column(
-                          children:  const[
-                            Text("adwawdawd",style: TextStyle(fontSize: 20),),
-                             Text("BLaaaaaaa",style: TextStyle(fontSize: 20)),
-                             Text("Homogenous",style: TextStyle(fontSize: 20))
-                             ],
+                        Flexible(
+                          child: Column(
+                            children: const [
+                              Text(
+                                "Trump has promised to reduce taxes from x to y",
+                                style: TextStyle(fontSize: 20),
+                              ),
+                            ]  
+                          ),
                         )
                       ],
                     ),
