@@ -47,6 +47,7 @@ class CandidatePage extends StatelessWidget {
                             Icon(Icons.money),
                             Icon(Icons.access_alarm_sharp),
                             Icon(Icons.hail),
+                            Icon(Icons.directions_walk)
                           ],
                         ),
                         Flexible(
@@ -63,6 +64,10 @@ class CandidatePage extends StatelessWidget {
                               ),
                               Text(
                                 "Trump has promised to reduce taxes from x to y",
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              Text(
+                                "Trump has promised to do x about immigration",
                                 style: TextStyle(fontSize: 20),
                               ),
                             ]  
