@@ -127,6 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
+        // ignore: sized_box_for_whitespace
         body: Container(
           height: size.height,
           child: Column(
