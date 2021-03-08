@@ -87,10 +87,11 @@ class CandidatePage extends StatelessWidget {
   }
 
   void getPostData() {
-    for(final post in responseList){
-        if(post["name"].toString() == candidate.candidateName){
-          
-        }
+    for (final post in responseList) {
+      if (post["name"].toString() == candidate.candidateName) {
+        String x = post["name"].toString();
+        String z = post["age"].toString();
+      }
     }
   }
 }
