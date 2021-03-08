@@ -14,6 +14,7 @@ class CandidatePage extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
 
+    getPostData();
     return Scaffold(
       appBar: AppBar(
         title: Text("${candidate.candidateName}'s page"),
@@ -86,12 +87,8 @@ class CandidatePage extends StatelessWidget {
     );
   }
 
-  void getPostData() {
-    for (final post in responseList) {
-      if (post["name"].toString() == candidate.candidateName) {
-        String x = post["name"].toString();
-        String z = post["age"].toString();
-      }
-    }
+  List<String> getPostData() {
+    var z = responseList.firstWhere(
+        (element) => element["name"].toString() == candidate.candidateName);
   }
 }
