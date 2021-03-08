@@ -85,4 +85,12 @@ class CandidatePage extends StatelessWidget {
       ),
     );
   }
+
+  void getPostData() {
+    for(final post in responseList){
+        if(post["name"].toString() == candidate.candidateName){
+          
+        }
+    }
+  }
 }
