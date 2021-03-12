@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:candidate_central/candidate_data.dart';
 import 'package:candidate_central/domain/core/candidate/candidate.dart';
 import 'package:candidate_central/presentation/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
 class CandidatePage extends StatelessWidget {
   final Candidate candidate;
+  List<Map<String, Object>> get responseList => candidateData;
   const CandidatePage({Key key, this.candidate}) : super(key: key);
 
   @override
@@ -12,6 +14,7 @@ class CandidatePage extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
 
+    getPostData();
     return Scaffold(
       appBar: AppBar(
         title: Text("${candidate.candidateName}'s page"),
@@ -54,7 +57,7 @@ class CandidatePage extends StatelessWidget {
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                 Text(
+                                Text(
                                   "Trump has promised to reduce taxes from x to y",
                                   style: TextStyle(fontSize: 20),
                                 ),
@@ -82,5 +85,10 @@ class CandidatePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<String> getPostData() {
+    var z = responseList.firstWhere(
+        (element) => element["name"].toString() == candidate.candidateName);
   }
 }
